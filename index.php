@@ -1,3 +1,6 @@
+<?php
+// require_once "config/conexion.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,17 +16,21 @@
     <main>
         <img src="img/logo_oppv.png" alt="logo_oppv" class="logo_oppv">
         <h3>Inicie sesión con sus datos de la organización</h3>
-        <form action="" method="post" class="form_login">
-            <input type="text" name="user_user" id="" placeholder="usuario" title="introduzca su usuario por favor"
-                required autofocus>
+        <form action="config/conexion.php" method="post" class="form_login">
+            <input type="text" name="user_user" id="" placeholder="usuario" pattern="[a-z]{2,20}[0-9]{0,3}"
+                title="Solo letras minúsculas y máximo 3 números. No se permiten caracteres especiales."
+                title="introduzca su usuario por favor" required autofocus>
             <span>
-                <input type="password" name="password_user" id="" placeholder="contraseña"
-                    pattern="^[A-Z](?=.*[0-9])(?=(?:.*[0-9]){1,4})(?=.*[^A-Za-z0-9]).{7,}$"
-                    title="Mínimo 8 caracteres, una mayúscula, números y al menos un carácter especial." required>
+                <input type="password" name="password_user" id="password_user" placeholder="contraseña"
+                    pattern="^[A-Z]{1}[a-z]{1,15}[0-9]{1,4}[!@#$%^&*]{1}$"
+                    title="Debe contener 1 mayúscula, de 1 a 8 minúsculas, de 1 a 4 números y 1 carácter especial."
+                    required>
                 <i class="fa-regular fa-eye" id="togglePassword"></i>
             </span>
             <input type="submit" value="Iniciar Sesión">
-            <input type="hidden" name="" id="error_user">
+            <div class="error_user">
+                <?php if (isset($_GET['error'])) { echo htmlspecialchars($_GET['error']); } ?>
+            </div>
         </form>
         <a href="https://selfservice.pancanal.com:9251/authorization.do" target="_blank" rel="noopener noreferrer"
             class="aut_pass">Autogestión de Contraseña</a>
@@ -33,6 +40,7 @@
             <h6>&copy 2026. División de Protección y vigilancia</h6>
         </footer>
     </main>
+    <script src="config/script.js"></script>
 </body>
 
 </html>
