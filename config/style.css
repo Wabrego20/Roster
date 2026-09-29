@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root{
+    --choco: #644c32;
+    --oscuro: #2d2e33;
+    --claro: #f3e5d6;
+}
+body {
+    min-height: 100vh;
+    width: 40%;
+    background-image: url("../img/fondo.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-width: 56%;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: var(--choco);
+    position: absolute;
+    right: 0;
+    top: 0;
+    gap: 10px;
+    color: var(--oscuro);
+}
+main h3, p{
+    max-width: 95%;
+}
+.logo_oppv{
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 10px var(--claro);
+    border-radius: 50%;
+    margin-top: 10px;
+}
+.form_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    flex-direction: column;
+    gap: 10px;
+}
+.form_login input{
+    max-width: 100%;
+    width: 300px;
+    padding: 7px;
+    outline: none;
+}
+.form_login span{
+    position: relative;
+}
+.form_login span .fa-eye{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.form_login input:focus {
+    border: 2px solid var(--oscuro);
+}
+input[type="submit"] {
+    background-color: var(--oscuro);
+    border: 2px solid var(--oscuro);
+    color: var(--claro);
+    cursor: pointer;
+    transition: 0.3s;
+}
+input[type="button"]:hover{
+    scale: 0.99;
+}
+.aut_pass{
+    color: var(--claro);
+    transition: 0.3s;
+}
+.aut_pass:hover{
+    scale:0.99;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.logo_acp{
+    width: 200px;
+}
+

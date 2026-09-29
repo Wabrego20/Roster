@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roster-OPPV</title>
+    <link rel="stylesheet" href="config/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+</head>
+
+<body>
+    <main>
+        <img src="img/logo_oppv.png" alt="logo_oppv" class="logo_oppv">
+        <h3>Inicie sesión con sus datos de la organización</h3>
+        <form action="" method="post" class="form_login">
+            <input type="text" name="user_user" id="" placeholder="usuario" title="introduzca su usuario por favor"
+                required autofocus>
+            <span>
+                <input type="password" name="password_user" id="" placeholder="contraseña"
+                    pattern="^[A-Z](?=.*[0-9])(?=(?:.*[0-9]){1,4})(?=.*[^A-Za-z0-9]).{7,}$"
+                    title="Mínimo 8 caracteres, una mayúscula, números y al menos un carácter especial." required>
+                <i class="fa-regular fa-eye" id="togglePassword"></i>
+            </span>
+            <input type="submit" value="Iniciar Sesión">
+            <input type="hidden" name="" id="error_user">
+        </form>
+        <a href="https://selfservice.pancanal.com:9251/authorization.do" target="_blank" rel="noopener noreferrer"
+            class="aut_pass">Autogestión de Contraseña</a>
+        <p>Gestión de personal. <b>"La seguridad somos todos"</b></p>
+        <footer>
+            <img src="img/white-logo.png" alt="logo_acp" class="logo_acp">
+            <h6>&copy 2026. División de Protección y vigilancia</h6>
+        </footer>
+    </main>
+</body>
+
+</html>
