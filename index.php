@@ -17,19 +17,21 @@
         <img src="img/logo_oppv.png" alt="logo_oppv" class="logo_oppv">
         <h3>Inicie sesión con sus datos de la organización</h3>
         <form action="config/conexion.php" method="post" class="form_login">
-            <input type="text" name="user_user" id="" placeholder="usuario" pattern="[a-z]{2,20}[0-9]{0,3}"
+            <input type="text" name="user_user" placeholder="usuario" pattern="[a-z]{2,20}[0-9]{0,3}"
                 title="Solo letras minúsculas y máximo 3 números. No se permiten caracteres especiales."
-                title="introduzca su usuario por favor" required autofocus>
+                required autofocus>
             <span>
                 <input type="password" name="password_user" id="password_user" placeholder="contraseña"
                     pattern="^[A-Z]{1}[a-z]{1,15}[0-9]{1,4}[!@#$%^&*]{1}$"
-                    title="Debe contener 1 mayúscula, de 1 a 8 minúsculas, de 1 a 4 números y 1 carácter especial."
+                    title="Debe contener 1 mayúscula, de 1 a 15 minúsculas, de 1 a 4 números y 1 carácter especial."
                     required>
                 <i class="fa-regular fa-eye" id="togglePassword"></i>
             </span>
             <input type="submit" value="Iniciar Sesión">
             <div class="error_user">
-                <?php if (isset($_GET['error'])) { echo htmlspecialchars($_GET['error']); } ?>
+                <?php if (isset($_GET['error'])) {
+                    echo htmlspecialchars($_GET['error']);
+                } ?>
             </div>
         </form>
         <a href="https://selfservice.pancanal.com:9251/authorization.do" target="_blank" rel="noopener noreferrer"
