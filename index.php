@@ -1,5 +1,5 @@
 <?php
-// require_once "config/conexion.php";
+require_once "config/conexion.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
     <main>
         <img src="img/logo_oppv.png" alt="logo_oppv" class="logo_oppv">
         <h3>Inicie sesión con sus datos de la organización</h3>
-        <form action="config/conexion.php" method="post" class="form_login">
+        <form action="config/login.php" method="post" class="form_login">
             <input type="text" name="user_user" placeholder="usuario" pattern="[a-z]{2,20}[0-9]{0,3}"
                 title="Solo letras minúsculas y máximo 3 números. No se permiten caracteres especiales."
                 required autofocus>

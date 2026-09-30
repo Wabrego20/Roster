@@ -11,3 +11,24 @@ togglePassword.addEventListener("click", function () {
         togglePassword.classList.add("fa-eye");
     }
 });
+
+/**Cargar foto de perfil*/
+const fotoPerfil = document.getElementById("fotoPerfil");
+const imagenPerfil = document.getElementById("imagenPerfil");
+const iconoUser = document.getElementById("iconoUser");
+
+fotoPerfil.addEventListener("change", function () {
+    const archivo = this.files[0];
+
+    if (archivo) {
+        const lector = new FileReader();
+
+        lector.onload = function (e) {
+            imagenPerfil.src = e.target.result;
+            imagenPerfil.style.display = "block";
+            iconoUser.style.display = "none";
+        };
+
+        lector.readAsDataURL(archivo);
+    }
+});
