@@ -18,17 +18,17 @@ if (!isset($_SESSION['user_user'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel Supervisor</title>
-    <link rel="stylesheet" href="../config/supervisor.css">
+    <link rel="stylesheet" href="../css/supervisor.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
 </head>
 
 <body>
     <?php require_once "../includes/header.php";?>
     <main>
-
+        <?php require_once "../includes/roster.php";?>
     </main>
     <?php require_once "../includes/footer.php";?>
-    <script src="../config/script.js"></script>
+    <script src="../js/supervisor.js"></script>
 </body>
 
 </html>

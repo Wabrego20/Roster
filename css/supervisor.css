@@ -1,0 +1,329 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+:root{
+    --choco: #644c32;
+    --oscuro: #2d2e33;
+    --claro: #f3e5d6;
+    --fuego: #882400;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+header{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 5px var(--oscuro);
+}
+.perfil{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.iniciales{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: var(--claro);
+    text-align: center;
+    font-size: 25px;
+}
+.usr_usr {
+    font-weight: bold;
+}
+
+.btn_logout{
+    border: none;
+    padding: 10px 7px;
+    border-radius: 6px;
+    background-color: var(--fuego);
+    text-decoration: none;
+    margin: 5px;
+    color: var(--claro);
+    transition: 0.3s;
+    font-size: 12px;
+}
+.btn_logout:hover{
+    scale: 0.99;
+}
+main{
+    flex: 1;  
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    color: var(--oscuro);
+    padding: 5px;
+    box-shadow: 0 0 5px var(--oscuro);
+    img{
+        width: 150px;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+
+.roster-container {
+    margin: 15px auto;
+    width: 99%;
+}
+
+/* ENCABEZADO */
+
+.roster-header {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.roster-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.roster-header p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+.fecha-principal {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.fecha-principal span {
+    display: block;
+    font-size: 11px;
+    color: #777;
+}
+
+.fecha-principal strong {
+    display: block;
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.btn-fecha {
+    border: none;
+    background: #00b581;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 22px;
+    margin: 0 15px;
+}
+
+/* PESTAÑAS */
+
+.pestanas {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 10px 10px 0 0;
+    overflow-x: auto;
+}
+
+.pestana {
+    border: none;
+    background: #eeeeee;
+    padding: 12px 22px;
+    margin-right: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pestana.activa {
+    background: #00b581;
+    color: white;
+}
+
+.btn-nueva-fecha {
+    margin-left: auto;
+    border: none;
+    background: #222;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ACCIONES */
+.acciones {
+    background: white;
+    padding: 12px;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+}
+.btn {
+    border: none;
+    padding: 10px 17px;
+    border-radius: 6px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.editar {
+    background: #ffc107;
+}
+.guardar {
+    background: #00b581;
+    color: white;
+}
+.enviar {
+    background: #2196f3;
+    color: white;
+}
+.descargar {
+    background: var(--oscuro);
+    color: white;
+}
+.imprimir {
+    background: #333;
+    color: white;
+}
+
+.tabla-container {
+    max-width: 100%;
+    min-width: 1200px;
+    height: 315px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    margin: auto;
+}
+
+.tablaRoster {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+th {
+    background: #263238;
+    color: white;
+    padding: 12px 8px;
+    border: 1px solid #555;
+    font-size: 13px;
+}
+
+th span {
+    display: block;
+    font-size: 11px;
+    margin-top: 5px;
+    font-weight: normal;
+}
+
+td {
+    border: 1px solid #d5d5d5;
+    padding: 5px 3px;
+    font-size: 13px;
+}
+
+/* PUESTO Y N.º PUESTO */
+td:nth-child(1),
+td:nth-child(2) {
+    text-align: center;
+    font-weight: bold;
+    width: 1%;
+    white-space: nowrap;
+}
+
+/* CELDAS DE PELOTONES */
+td:nth-child(n+3) {
+    width: 25%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* CELDA EN EDICIÓN */
+td[contenteditable="true"] {
+    background: var(--claro);
+    cursor: text;
+    outline: 2px solid #00b581;
+    outline-offset: -2px;
+}
+
+tbody tr:hover td {
+    background: #f7f7f7;
+}
+/* IMPRESIÓN */
+
+@media print {
+
+    body {
+        background: white;
+    }
+
+    .roster-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .roster-header {
+        border: none;
+    }
+
+    .pestanas,
+    .acciones {
+        display: none;
+    }
+
+    .tabla-container {
+        border: none;
+        overflow: visible;
+    }
+
+    table {
+        min-width: 0;
+        font-size: 9px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+
+    th {
+        background: #ddd !important;
+        color: black;
+    }
+}

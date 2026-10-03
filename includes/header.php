@@ -57,5 +57,5 @@ $colorPerfil = $colores[array_rand($colores)];
             <span class="usr_usr"><?php echo htmlspecialchars($_SESSION['user_user']); ?></span>
         </div>
     </div>
-    <a href="../config/logout.php" class="btn_logout" title="Haga clic para cerrar su sesión">Cerrar Sesión</a>
+    <a href="../config/logout.php" class="btn_logout" title="Haga clic para cerrar su sesión"><i class="fa-solid fa-right-from-bracket" style="margin-right: 5px;"></i>Cerrar Sesión</a>
 </header>

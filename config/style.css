@@ -61,8 +61,11 @@ main h3, p{
 .form_login input{
     max-width: 100%;
     width: 300px;
-    padding: 7px;
+    border: 2px solid var(--claro);
+    padding: 10px 7px;
+    border-radius: 6px;
     outline: none;
+    transition: 0.3s;
 }
 .form_login span{
     position: relative;
@@ -84,10 +87,12 @@ input[type="submit"] {
     color: var(--claro);
     cursor: pointer;
     transition: 0.3s;
+    padding: 10px 7px;
 }
-input[type="button"]:hover{
+input[type="submit"]:hover{
     scale: 0.99;
 }
+
 .aut_pass{
     color: var(--claro);
     transition: 0.3s;
@@ -106,5 +111,8 @@ footer{
 }
 .logo_acp{
     width: 200px;
+}
+.fa-right-from-bracket{
+    margin-right: 5px;
 }
 
