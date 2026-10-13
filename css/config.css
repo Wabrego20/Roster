@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+:root{
+    --choco: #644c32;
+    --oscuro: #2d2e33;
+    --oscuro2: #0000;
+    --claro: #f3e5d6;
+    --fuego: #ac3205;
+    --fuego2: #882400;
+    --menta: #00b581;
+    --menta2: #04664a;
+    --gris: #737475;
+    --sol: #ffc107;
+    --sol2:#cf9c04;
+    --papel: #fff;
+    --oceano: #2196F3;
+    --zafiro: #0F52BA;
+    --mora: #9C27B0;
+    --uva: #42144b;
+    --naranja: #FF4500;
+    --rosa: #E91E63;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+main {
+    display: flex;
+    flex: 1;
+}
+
+
+.btn {
+    border: none;
+    padding: 7px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 12px;
+}
+.btn:hover{
+    scale: 0.98;
+}
+
+.edit {
+    background: var(--sol);
+    color: var(--papel);
+}
+
+.save {
+    background: var(--menta);
+    color: var(--papel);
+}
+.delete {
+    background: var(--fuego);
+    color: var(--papel);
+}
+
+.send {
+    background: var(--oceano);
+    color: var(--papel);
+}
+
+.download {
+    background: var(--oscuro);
+    color: var(--papel);
+}
+.wait {
+    background: var(--mora);
+    color: var(--papel);
+}
+
+.print {
+    background: var(--zafiro);
+    color: var(--papel);
+}
+
+.logout {
+    background-color: var(--fuego);
+    color: var(--papel);
+    text-decoration: none;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.new {
+    background: var(--choco);
+    color: white;
+}
+
+.error_user{
+    color: var(--fuego);
+}
+
+.success_user{
+    color: var(--menta);
+}
+
+

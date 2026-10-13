@@ -1,0 +1,132 @@
+<?php
+session_start();
+require_once "../conexion.php";
+require_once "../sesion.php";
+
+/* Verificar sesión */
+if (!isset($_SESSION['user_user'])) {
+    header("Location: ../index.php?error=" . urlencode("Debe iniciar sesión."));
+    exit;
+}
+// Sectores que deben aparecer siempre en la gráfica
+$sectores = ['A', 'B', 'C', 'G'];
+$puestosActivos = array_fill_keys($sectores, 0);
+
+// Consultar los puestos activos agrupados por sector
+$sql = "SELECT sector_puesto, COUNT(*) AS total
+        FROM puestos
+        WHERE activo_puesto = 1
+          AND sector_puesto IN ('A', 'B', 'C', 'G')
+        GROUP BY sector_puesto";
+
+$resultado = mysqli_query($conexion, $sql);
+if ($resultado) {
+    while ($fila = mysqli_fetch_assoc($resultado)) {
+        $puestosActivos[$fila['sector_puesto']] =
+            (int) $fila['total'];
+    }
+}
+
+// Preparar datos para Chart.js
+$datosGrafica = array_values($puestosActivos);
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/config.css">
+    <link rel="stylesheet" href="../../css/1-admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
+    <title>Panel del Administrador</title>
+</head>
+
+<body>
+    <header>
+        <?php require_once "../header.php"; ?>
+    </header>
+    <main>
+        <ul>
+            <li><a href="" class="active"><i class="fa-solid fa-landmark-dome"></i>Inicio</a></li>
+            <li><a href=""><i class="fa-solid fa-person-military-pointing"></i>Usuarios</a></li>
+            <li><a href=""><i class="fa-solid fa-map-location-dot"></i>Sectores</a></li>
+            <li><a href=""><i class="fa-solid fa-taxi"></i>Puestos</a></li>
+            <li><a href=""><i class="fa-solid fa-calendar-days"></i>Periodos de Pago</a></li>
+            <li><a href=""><i class="fa-solid fa-gear"></i>Configuración</a></li>
+        </ul>
+        <div class="panel">
+            <div class="estados personal">
+                <h3>Estado del Personal</h3>
+                <div class="card save">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                    <div class="card_estado">
+                        <h3>0</h3>
+                        <h4>Trabajando</h4>
+                        <h5>0%</h5>
+                    </div>
+                </div>
+                <div class="card send">
+                    <i class="fa-solid fa-face-grin-wide"></i>
+                    <div class="card_estado">
+                        <h3>0</h3>
+                        <h4>Libres</h4>
+                        <h5>0%</h5>
+                    </div>
+                </div>
+                <div class="card wait">
+                    <i class="fa-solid fa-suitcase-rolling"></i>
+                    <div class="card_estado">
+                        <h3>0</h3>
+                        <h4>Vacaciones Programadas</h4>
+                        <h5>0%</h5>
+                    </div>
+                </div>
+                <div class="card delete">
+                    <i class="fa-solid fa-person-circle-xmark"></i>
+                    <div class="card_estado">
+                        <h3>0</h3>
+                        <h4>Vacaciones No Programadas</h4>
+                        <h5>0%</h5>
+                    </div>
+                </div>
+                <div class="card edit">
+                    <i class="fa-solid fa-id-badge"></i>
+                    <div class="card_estado">
+                        <h3>0</h3>
+                        <h4>Licencias</h4>
+                        <h5>0%</h5>
+                    </div>
+                </div>
+                <div class="card download">
+                    <i class="fa-solid fa-users"></i>
+                    <div class="card_estado">
+                        <h3>0</h3>
+                        <h4>Total</h4>
+                        <h5>0%</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grafica-card">
+                <h3>Puestos Activos vs Sector</h3>
+                <div class="grafica-contenedor">
+                    <canvas
+                        id="graficaPuestos"
+                        data-puestos="<?= htmlspecialchars(json_encode($datosGrafica), ENT_QUOTES, 'UTF-8') ?>">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <?php require_once "../footer.php"; ?>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../js/1-admin.js"></script>
+</body>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+@import url("./config.css");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+main{
+    width: 100%;
+    margin: auto;
+    color: var(--choco);
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: var(--claro);
+    min-width: 155px;
+}
+
+ul li{
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 10px;
+}
+ul li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:7px 10px;
+    text-decoration: none;
+    color: var(--oscuro);
+    transition: 0.3s;
+    border-radius: 7px;
+}
+ul li a:hover{
+    background-color: var(--papel);
+}
+ul li a i{
+    color: var(--oscuro);
+}
+ul li .active{
+    background-color: var(--choco);
+    pointer-events: none;
+    color: var(--claro);
+    i{
+        color: var(--claro);
+    }
+}
+.panel{
+    margin: 10px;
+    width: 100%;
+    overflow-x: auto;
+}
+.estados{
+    background-color: var(--claro);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 9px;
+    border-radius: 7px;
+    width: 1070px;
+    overflow: auto;
+    margin: 10px 0;
+    min-width: 1170px;
+    flex-shrink: 0;
+}
+.estados h3{
+    width: 100%;
+}
+.card{
+    display: flex;
+    width: 180px;
+    height: 100px;
+    border-radius: 7px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+}
+
+.card .fa-solid{
+    font-size: 26px;
+    min-width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.card_estado{
+    width: 100%;
+}
+.fa-helmet-safety{
+    background-color: var(--menta2);
+}
+.fa-face-grin-wide{
+    background-color: var(--zafiro);
+}
+.fa-person-circle-xmark{
+    background-color: var(--fuego2);
+}
+.fa-suitcase-rolling{
+    background-color: var(--uva);
+}
+.fa-users{
+    background-color: var(--oscuro2);
+}
+.fa-id-badge{
+    background-color: var(--sol2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grafica-card {
+    width: 350px;
+    padding: 5px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.grafica-card h3 {
+    margin: 2px;
+    color: var(--choco);
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    margin: auto;
+}
+
+.grafica-contenedor {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    z-index: 2;
+}
