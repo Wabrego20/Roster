@@ -55,55 +55,65 @@ $datosGrafica = array_values($puestosActivos);
             <li><a href=""><i class="fa-solid fa-calendar-days"></i>Periodos de Pago</a></li>
             <li><a href=""><i class="fa-solid fa-gear"></i>Configuración</a></li>
         </ul>
-        <div class="panel">
-            <div class="estados personal">
+        <div class="seccion_estados_personal">
+            <div class="seccion_estados">
                 <h3>Estado del Personal</h3>
-                <div class="card save">
-                    <i class="fa-solid fa-helmet-safety"></i>
-                    <div class="card_estado">
-                        <h3>0</h3>
-                        <h4>Trabajando</h4>
-                        <h5>0%</h5>
+                <div class="seccion_cards">
+                    <div class="card save">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                        <div class="card_estado">
+                            <h3>0</h3>
+                            <h4>Trabajando</h4>
+                            <h5>0%</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="card send">
-                    <i class="fa-solid fa-face-grin-wide"></i>
-                    <div class="card_estado">
-                        <h3>0</h3>
-                        <h4>Libres</h4>
-                        <h5>0%</h5>
+                    <div class="card send">
+                        <i class="fa-solid fa-face-grin-wide"></i>
+                        <div class="card_estado">
+                            <h3>0</h3>
+                            <h4>Libres</h4>
+                            <h5>0%</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="card wait">
-                    <i class="fa-solid fa-suitcase-rolling"></i>
-                    <div class="card_estado">
-                        <h3>0</h3>
-                        <h4>Vacaciones Programadas</h4>
-                        <h5>0%</h5>
+                    <div class="card wait">
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                        <div class="card_estado">
+                            <h3>0</h3>
+                            <h4>Vacaciones Programadas</h4>
+                            <h5>0%</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="card delete">
-                    <i class="fa-solid fa-person-circle-xmark"></i>
-                    <div class="card_estado">
-                        <h3>0</h3>
-                        <h4>Vacaciones No Programadas</h4>
-                        <h5>0%</h5>
+                    <div class="card delete">
+                        <i class="fa-solid fa-person-circle-xmark"></i>
+                        <div class="card_estado">
+                            <h3>0</h3>
+                            <h4>Vacaciones No Programadas</h4>
+                            <h5>0%</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="card edit">
-                    <i class="fa-solid fa-id-badge"></i>
-                    <div class="card_estado">
-                        <h3>0</h3>
-                        <h4>Licencias</h4>
-                        <h5>0%</h5>
+                    <div class="card flor">
+                        <i class="fa-solid fa-user-clock"></i>
+                        <div class="card_estado">
+                            <h3>0</h3>
+                            <h4>Promoción Temporal</h4>
+                            <h5>0%</h5>
+                        </div>
                     </div>
-                </div>
-                <div class="card download">
-                    <i class="fa-solid fa-users"></i>
-                    <div class="card_estado">
-                        <h3>0</h3>
-                        <h4>Total</h4>
-                        <h5>0%</h5>
+                    <div class="card edit">
+                        <i class="fa-solid fa-id-badge"></i>
+                        <div class="card_estado">
+                            <h3>0</h3>
+                            <h4>Licencias</h4>
+                            <h5>0%</h5>
+                        </div>
+                    </div>
+                    <div class="card download">
+                        <i class="fa-solid fa-users"></i>
+                        <div class="card_estado">
+                            <h3>0</h3>
+                            <h4>Total</h4>
+                            <h5>0%</h5>
+                        </div>
                     </div>
                 </div>
             </div>

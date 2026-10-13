@@ -50,37 +50,58 @@ ul li .active{
         color: var(--claro);
     }
 }
-.panel{
+
+.seccion_estados_personal{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
     margin: 10px;
-    width: 100%;
-    overflow-x: auto;
-}
-.estados{
-    background-color: var(--claro);
-    display: flex;
-    flex-wrap: wrap;
     gap: 10px;
-    padding: 9px;
-    border-radius: 7px;
-    width: 1070px;
-    overflow: auto;
-    margin: 10px 0;
-    min-width: 1170px;
-    flex-shrink: 0;
 }
-.estados h3{
+.seccion_estados{
+    background-color: var(--claro);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    overflow-x: auto;
+    margin: 0 auto;
+}
+.seccion_estados h3{
     width: 100%;
 }
-.card{
+.seccion_cards{
+    max-width: 1165px;
+    box-sizing: border-box;
+    flex-shrink: 0;
     display: flex;
-    width: 180px;
-    height: 100px;
-    border-radius: 7px;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
-    margin: auto;
 }
+.seccion_cards .card{
+    min-width: 180px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.card_estado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 95%;
+}
+
+
+
 
 .card .fa-solid{
     font-size: 26px;
@@ -89,11 +110,9 @@ ul li .active{
     line-height: 50px;
     text-align: center;
     border-radius: 50%;
-    margin-left: 5px;
+    margin: 0 5px;
 }
-.card_estado{
-    width: 100%;
-}
+
 .fa-helmet-safety{
     background-color: var(--menta2);
 }
@@ -111,6 +130,9 @@ ul li .active{
 }
 .fa-id-badge{
     background-color: var(--sol2);
+}
+.fa-user-clock{
+    background-color: var(--rosa2);
 }
 
 
