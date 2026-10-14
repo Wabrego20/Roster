@@ -36,6 +36,7 @@ $datosGrafica = array_values($puestosActivos);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../img/icon2.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/config.css">
     <link rel="stylesheet" href="../../css/1-admin.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
@@ -56,6 +57,31 @@ $datosGrafica = array_values($puestosActivos);
             <li><a href=""><i class="fa-solid fa-gear"></i>Configuración</a></li>
         </ul>
         <div class="seccion_estados_personal">
+            <div class="admin">
+                <h2>Administrador</h2>
+                <?php
+                date_default_timezone_set('America/Panama');
+                $fecha_hoy = date('j') . ' de ' .
+                    [
+                        1 => 'enero',
+                        2 => 'febrero',
+                        3 => 'marzo',
+                        4 => 'abril',
+                        5 => 'mayo',
+                        6 => 'junio',
+                        7 => 'julio',
+                        8 => 'agosto',
+                        9 => 'septiembre',
+                        10 => 'octubre',
+                        11 => 'noviembre',
+                        12 => 'diciembre'
+                    ][(int) date('n')] . ' del ' . date('Y');
+                ?>
+                <div class="fecha-hoy">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <span>Hoy, <?php echo $fecha_hoy; ?></span>
+                </div>
+            </div>
             <div class="seccion_estados">
                 <h3>Estado del Personal</h3>
                 <div class="seccion_cards">
@@ -118,13 +144,41 @@ $datosGrafica = array_values($puestosActivos);
                 </div>
             </div>
 
-            <div class="grafica-card">
-                <h3>Puestos Activos vs Sector</h3>
-                <div class="grafica-contenedor">
-                    <canvas
-                        id="graficaPuestos"
-                        data-puestos="<?= htmlspecialchars(json_encode($datosGrafica), ENT_QUOTES, 'UTF-8') ?>">
-                    </canvas>
+            <div class="seccion_eventos">
+                <div class="grafica-card">
+                    <h3>Puestos Activos vs Sector</h3>
+                    <div class="grafica-contenedor">
+                        <canvas
+                            id="graficaPuestos"
+                            data-puestos="<?= htmlspecialchars(json_encode($datosGrafica), ENT_QUOTES, 'UTF-8') ?>">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="poligono">
+                    <h2>Polígono Hoy</h2>
+                    <div class="poligono_cards">
+                        <div class="card card1">
+                            <div class="titulo">
+                                <i class="fa-solid fa-person-military-rifle"></i>
+                                <h4>Instructores</h4>
+                            </div>
+                            <h1>0</h1>
+                        </div>
+                        <div class="card card2">
+                            <div class="titulo">
+                                <i class="fa-solid fa-person-rifle"></i>
+                                <h4>Tiradores</h4>
+                            </div>
+                            <h1>0</h1>
+                        </div>
+                        <div class="card card3">
+                            <div class="titulo">
+                                <i class="fa-solid fa-person-military-to-person"></i>
+                                <h4>Personal Total</h4>
+                            </div>
+                            <h1>0</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,18 +1,20 @@
 @import url("./config.css");
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-main{
+
+main {
     width: 100%;
     margin: auto;
     color: var(--choco);
     justify-content: space-between;
 }
 
-ul{
+ul {
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -20,38 +22,51 @@ ul{
     min-width: 155px;
 }
 
-ul li{
+ul li {
     justify-content: center;
     align-items: center;
     list-style: none;
     margin: 10px;
 }
-ul li a{
+
+ul li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding:7px 10px;
+    padding: 7px 10px;
     text-decoration: none;
     color: var(--oscuro);
     transition: 0.3s;
     border-radius: 7px;
 }
-ul li a:hover{
+
+ul li a:hover {
     background-color: var(--papel);
 }
-ul li a i{
+
+ul li a i {
     color: var(--oscuro);
 }
-ul li .active{
+
+ul li .active {
     background-color: var(--choco);
     pointer-events: none;
     color: var(--claro);
-    i{
+
+    i {
         color: var(--claro);
     }
 }
 
-.seccion_estados_personal{
+.admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.seccion_estados_personal {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -60,7 +75,18 @@ ul li .active{
     margin: 10px;
     gap: 10px;
 }
-.seccion_estados{
+
+.seccion_eventos {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+    border-radius: 7px;
+}
+
+.seccion_estados {
     background-color: var(--claro);
     min-width: 0;
     display: flex;
@@ -71,10 +97,12 @@ ul li .active{
     overflow-x: auto;
     margin: 0 auto;
 }
-.seccion_estados h3{
+
+.seccion_estados h3 {
     width: 100%;
 }
-.seccion_cards{
+
+.seccion_cards {
     max-width: 1165px;
     box-sizing: border-box;
     flex-shrink: 0;
@@ -83,7 +111,8 @@ ul li .active{
     align-items: center;
     gap: 10px;
 }
-.seccion_cards .card{
+
+.seccion_cards .card {
     min-width: 180px;
     height: 100px;
     display: flex;
@@ -92,7 +121,7 @@ ul li .active{
     border-radius: 7px;
 }
 
-.card_estado{
+.card_estado {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -100,10 +129,7 @@ ul li .active{
     min-height: 95%;
 }
 
-
-
-
-.card .fa-solid{
+.card .fa-solid {
     font-size: 26px;
     min-width: 50px;
     height: 50px;
@@ -113,39 +139,124 @@ ul li .active{
     margin: 0 5px;
 }
 
-.fa-helmet-safety{
+.fa-helmet-safety {
     background-color: var(--menta2);
 }
-.fa-face-grin-wide{
+
+.fa-face-grin-wide {
     background-color: var(--zafiro);
 }
-.fa-person-circle-xmark{
+
+.fa-person-circle-xmark {
     background-color: var(--fuego2);
 }
-.fa-suitcase-rolling{
+
+.fa-suitcase-rolling {
     background-color: var(--uva);
 }
-.fa-users{
+
+.fa-users {
     background-color: var(--oscuro2);
 }
-.fa-id-badge{
+
+.fa-id-badge {
     background-color: var(--sol2);
 }
-.fa-user-clock{
+
+.fa-user-clock {
     background-color: var(--rosa2);
 }
 
+.poligono {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    background-color: var(--claro);
+    gap: 10px;
+    border-radius: 7px;
+    
+}
 
+.poligono_cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+}
 
+.poligono h2{
+    width: 100%;
+}
+/* Tarjetas base */
+.poligono .card {
+    padding: 10px;
+    color: var(--papel);
+    border: 1px solid var(--choco);
+    width: 160px;
+    height: 100px;
+    border-radius: 10px;
+    box-shadow:
+        inset 0 0 18px var(--brillo-interior),
+        0 0 8px var(--brillo-exterior);
 
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.card .titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+}
+.poligono .card h1{
+    text-align: center;
+}
 
+/* Instructores: menta */
+.card1 {
+    background: linear-gradient(
+        145deg,
+        var(--menta2),
+        #123b32,
+        var(--oscuro2)
+    );
 
+    --borde: var(--menta);
+    --brillo-interior: #00b5811a;
+    --brillo-exterior: #00b58126;
+}
 
+/* Tiradores: océano */
+.card2 {
+    background: linear-gradient(
+        145deg,
+        var(--zafiro),
+        #15334f,
+        var(--oscuro2)
+    );
 
+    --borde: var(--oceano);
+    --brillo-interior: rgb(33 150 243 / 10%);
+    --brillo-exterior: rgb(33 150 243 / 15%);
+}
 
+/* Personal total: sol */
+.card3 {
+    background: linear-gradient(
+        145deg,
+        var(--choco),
+        #393126,
+        var(--oscuro2)
+    );
 
-
-
+    --borde: var(--sol2);
+    --brillo-interior: rgb(255 193 7 / 8%);
+    --brillo-exterior: rgb(255 193 7 / 15%);
+}
 
 .grafica-card {
     width: 350px;
