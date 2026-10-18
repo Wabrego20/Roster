@@ -37,15 +37,21 @@ $inicialApellido = strtoupper(substr($apellido, 0, 1));
 $colores = [
     'var(--choco)',
     'var(--oscuro)',
+    'var(--oscuro2)',
     'var(--fuego)',
+    'var(--fuego2)',
     'var(--menta)',
+    'var(--menta2)',
     'var(--gris)',
     'var(--sol)',
+    'var(--sol2)',
     'var(--oceano)',
+    'var(--zafiro)',
     'var(--mora)',
+    'var(--uva)',
     'var(--naranja)',
     'var(--rosa)',
-    'var(--zafiro)'
+    'var(--rosa2)'
 ];
 
 $colorPerfil = $colores[array_rand($colores)];

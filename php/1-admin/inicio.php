@@ -39,6 +39,8 @@ $datosGrafica = array_values($puestosActivos);
     <link rel="shortcut icon" href="../../img/icon2.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/config.css">
     <link rel="stylesheet" href="../../css/1-admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon-uicons@3.3.1/css/solid/rounded.css" />
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css">
     <title>Panel del Administrador</title>
 </head>
@@ -50,7 +52,7 @@ $datosGrafica = array_values($puestosActivos);
     <main>
         <ul>
             <li><a href="" class="active"><i class="fa-solid fa-landmark-dome"></i>Inicio</a></li>
-            <li><a href=""><i class="fa-solid fa-person-military-pointing"></i>Usuarios</a></li>
+            <li><a href="usuarios.php"><i class="fa-solid fa-person-military-pointing"></i>Usuarios</a></li>
             <li><a href=""><i class="fa-solid fa-map-location-dot"></i>Sectores</a></li>
             <li><a href=""><i class="fa-solid fa-taxi"></i>Puestos</a></li>
             <li><a href=""><i class="fa-solid fa-calendar-days"></i>Periodos de Pago</a></li>
@@ -155,7 +157,10 @@ $datosGrafica = array_values($puestosActivos);
                     </div>
                 </div>
                 <div class="poligono">
-                    <h2>Polígono Hoy</h2>
+                    <div class="pol_tit">
+                        <h2>Polígono Hoy</h2>
+                        <img src="../../img/objetivo.png" alt="poligono">
+                    </div>
                     <div class="poligono_cards">
                         <div class="card card1">
                             <div class="titulo">
@@ -179,6 +184,33 @@ $datosGrafica = array_values($puestosActivos);
                             <h1>0</h1>
                         </div>
                     </div>
+                </div>
+                <div class="alarmas">
+                    <div class="tit_alar">
+                        <h3>Notificaciones</h3>
+                        <div class="icono">
+                            <i class="fa-solid fa-bell"></i>
+                            <h5>0</h5>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Evento</th>
+                                <th>Día</th>
+                                <th>Inicio</th>
+                                <th>Fin</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Edif. 705</td>
+                                <td>Hoy</td>
+                                <td>0800</td>
+                                <td>1600</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

@@ -176,10 +176,10 @@ ul li .active {
     background-color: var(--claro);
     gap: 10px;
     border-radius: 7px;
-    
+
 }
 
-.poligono_cards{
+.poligono_cards {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,9 +188,76 @@ ul li .active {
     margin: auto;
 }
 
-.poligono h2{
-    width: 100%;
+.pol_tit {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
 }
+
+.pol_tit img {
+    width: 65px;
+}
+
+.alarmas {
+    box-shadow: 0 0 2px var(--fuego);
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.tit_alar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--choco);
+}
+
+.tit_alar .icono {
+    position: relative;
+}
+
+.tit_alar .icono h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--papel);
+}
+
+.tit_alar .icono .fa-bell {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    color: var(--fuego);
+    font-size: 30px;
+
+}
+
+/*tabla alarmas*/
+table {
+    border-collapse: collapse;
+}
+
+thead th {
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 2px solid;
+}
+
+tbody td {
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid var(--claro);
+}
+
+th,
+td {
+    vertical-align: middle;
+}
+
 /* Tarjetas base */
 .poligono .card {
     padding: 10px;
@@ -206,24 +273,24 @@ ul li .active {
     transition: transform 0.3s ease,
         box-shadow 0.3s ease;
 }
-.card .titulo{
+
+.card .titulo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 95%;
 }
-.poligono .card h1{
+
+.poligono .card h1 {
     text-align: center;
 }
 
 /* Instructores: menta */
 .card1 {
-    background: linear-gradient(
-        145deg,
-        var(--menta2),
-        #123b32,
-        var(--oscuro2)
-    );
+    background: linear-gradient(145deg,
+            var(--menta2),
+            #123b32,
+            var(--oscuro2));
 
     --borde: var(--menta);
     --brillo-interior: #00b5811a;
@@ -232,12 +299,10 @@ ul li .active {
 
 /* Tiradores: océano */
 .card2 {
-    background: linear-gradient(
-        145deg,
-        var(--zafiro),
-        #15334f,
-        var(--oscuro2)
-    );
+    background: linear-gradient(145deg,
+            var(--zafiro),
+            #15334f,
+            var(--oscuro2));
 
     --borde: var(--oceano);
     --brillo-interior: rgb(33 150 243 / 10%);
@@ -246,12 +311,10 @@ ul li .active {
 
 /* Personal total: sol */
 .card3 {
-    background: linear-gradient(
-        145deg,
-        var(--choco),
-        #393126,
-        var(--oscuro2)
-    );
+    background: linear-gradient(145deg,
+            var(--choco),
+            #393126,
+            var(--oscuro2));
 
     --borde: var(--sol2);
     --brillo-interior: rgb(255 193 7 / 8%);
@@ -280,4 +343,181 @@ ul li .active {
     width: 100%;
     height: 180px;
     z-index: 2;
+}
+
+
+
+
+
+
+
+
+/*==============PESTAÑA DE USUARIOS===================*/
+.tabla-contenedor {
+    min-width: 0;
+    overflow: auto;
+    margin: 0 auto;
+}
+
+.tabla-usuarios {
+    border-collapse: collapse;
+    flex-shrink: 0;
+    max-width: 1165px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.tabla-usuarios tbody tr {
+    border-bottom: 1px solid var(--claro);
+    transition: background-color 0.3s ease;
+}
+
+.tabla-usuarios tbody tr:hover {
+    background-color: var(--papel);
+}
+
+.tabla-usuarios td small {
+    display: block;
+    margin-top: 4px;
+    color: var(--gris);
+}
+
+.estado,
+.btn-editar {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.activo {
+    color: var(--menta);
+}
+
+.inactivo {
+    color: var(--fuego2);
+}
+
+.btn-editar {
+    color: var(--zafiro);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.btn-editar:hover {
+    color: var(--oceano);
+}
+
+
+.tabla-acciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px;
+    border-top: 1px solid var(--choco);
+    padding-top: 10px;
+}
+
+.buscador-usuarios {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    max-width: 450px;
+}
+
+.tabla-acciones .buscador-usuarios input[type="search"] {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 11px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #1f2937;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tabla-acciones .buscador-usuarios input[type="search"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgb(37 99 235 / 15%);
+    outline: none;
+}
+
+.tabla-acciones .buscador-usuarios input[type="search"]::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+.btn-buscar,
+.btn-crear {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-buscar {
+    background: var(--zafiro);
+    color: var(--papel);
+}
+
+.btn-buscar:hover {
+    background: var(--oceano);
+}
+
+.btn-crear {
+    background: var(--menta2);
+    color: var(--papel);
+}
+
+.btn-crear:hover {
+    background: var(--menta);
+}
+
+.btn-buscar:hover,
+.btn-crear:hover {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .tabla-acciones {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .buscador-usuarios {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .btn-crear {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }

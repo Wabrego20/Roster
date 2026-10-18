@@ -64,7 +64,7 @@ if ($resultado->num_rows === 1) {
 
             /* Redirigir según el rol */
             if ($rol_id == 1) {
-                header("Location: roles/1-admin.php");
+                header("Location: 1-admin/inicio.php");
             } elseif ($rol_id == 2) {
                 header("Location: roles/2-superv.php");
             } elseif ($rol_id == 3) {
